@@ -1,17 +1,36 @@
-<!-- MENU -->
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="projects.html">Projects</a> |
-  <a href="blog.html">Blog</a>
-</nav>
-<hr>
+<!-- HAMBURGER + HOME -->
+<div style="display:flex; align-items:center; gap:10px;">
 
-<hr>
+  <!-- Hamburger -->
+  <button onclick="toggleMenu()">☰</button>
+
+  <script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  if (menu.style.display === "none") {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
+}
+</script>
+  
+  <!-- Home Icon -->
+  <a href="index.html">🏠</a>
+
+</div>
+
+<!-- DROPDOWN MENU -->
+<div id="menu" style="display:none;">
+  <p><a href="index.html">Home</a></p>
+  <p><a href="projects.html">Projects</a></p>
+  <p><a href="blog.html">Blog</a></p>
+</div>
+
 
 <h2 id="projects">Projects</h2>
 
 <!-- MENU / CATEGORY -->
-<h2>Projects</h2>
 
 <ul>
   <li><a href="#video">Video</a></li>
@@ -22,7 +41,7 @@
 <!-- YouTube -->
 <h2 id="video">Video Projects (Youtube)</h2>
 
-<iframe width="560" height="315" 
+<iframe width="426" height="240" 
 src="https://www.youtube.com/embed/XMgE5I-8R_Q?si=6XJ75ABAezzesBjM" 
 title="YouTube video player" frameborder="0" allow="accelerometer; 
 autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
@@ -40,7 +59,8 @@ web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 <h4>Project 3 (Instagram)</h4>
 <blockquote class="instagram-media" data-instgrm-permalink="INSTAGRAM_LINK"></blockquote>
 
-<p><a href="index.html">Back to Home</a></p>
-
 <h2 id="music">Music Projects</h2>
 <p>your music here</p>
+
+
+

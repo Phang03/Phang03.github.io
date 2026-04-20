@@ -6,14 +6,34 @@
 
 <body>
 
-<!-- MENU -->
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="projects.html">Projects</a> |
-  <a href="blog.html">Blog</a>
-</nav>
+<!-- HAMBURGER + HOME -->
+<div style="display:flex; align-items:center; gap:10px;">
 
-<hr>
+  <!-- Hamburger -->
+  <button onclick="toggleMenu()">☰</button>
+
+  <script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  if (menu.style.display === "none") {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
+}
+</script>
+  
+  <!-- Home Icon -->
+  <a href="index.html">🏠</a>
+
+</div>
+
+<!-- DROPDOWN MENU -->
+<div id="menu" style="display:none;">
+  <p><a href="index.html">Home</a></p>
+  <p><a href="projects.html">Projects</a></p>
+  <p><a href="blog.html">Blog</a></p>
+</div>
 
 <hr>
 

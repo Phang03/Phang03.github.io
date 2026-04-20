@@ -6,37 +6,43 @@
 
 <body>
 
-<!-- HAMBURGER + HOME -->
-<div style="display:flex; align-items:center; gap:10px;">
+<div style="position:relative;">
 
   <!-- Hamburger -->
-  <button onclick="toggleMenu()">☰</button>
+  <button onclick="toggleMainMenu()">☰</button>
+
+  <!-- MAIN MENU -->
+  <div id="mainMenu" style="display:none; border:1px solid black; padding:10px; width:150px;">
+
+    <p><a href="index.html">Home</a></p>
+
+    <!-- PROJECT DROPDOWN -->
+    <div>
+      <p onclick="toggleProjectMenu()" style="cursor:pointer;">Projects ▼</p>
+
+      <div id="projectMenu" style="display:none; margin-left:10px;">
+        <p><a href="projects.html#video">Video</a></p>
+        <p><a href="projects.html#music">Music</a></p>
+      </div>
+    </div>
+
+    <p><a href="blog.html">Blog</a></p>
+
+  </div>
+</div>
 
   <script>
-function toggleMenu() {
-  var menu = document.getElementById("menu");
-  if (menu.style.display === "none") {
-    menu.style.display = "block";
-  } else {
-    menu.style.display = "none";
-  }
+function toggleMainMenu() {
+  var menu = document.getElementById("mainMenu");
+  menu.style.display = (menu.style.display === "none") ? "block" : "none";
+}
+
+function toggleProjectMenu() {
+  var submenu = document.getElementById("projectMenu");
+  submenu.style.display = (submenu.style.display === "none") ? "block" : "none";
 }
 </script>
   
-  <!-- Home Icon -->
-  <a href="index.html">🏠</a>
-
-</div>
-
-<!-- DROPDOWN MENU -->
-<div id="menu" style="display:none;">
-  <p><a href="index.html">Home</a></p>
-  <p><a href="projects.html">Projects</a></p>
-  <p><a href="blog.html">Blog</a></p>
-</div>
-
-<hr>
-
 <!-- HERO -->
 <h1>Phang03</h1>
 <p>Student | Creator | Developer</p>
